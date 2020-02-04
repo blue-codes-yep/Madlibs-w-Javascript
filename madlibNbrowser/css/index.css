@@ -1,0 +1,32 @@
+label {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100px;
+}
+
+input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 75px;
+    border: 2px solid black;
+
+}
+
+body { 
+    
+    background-color: blanchedalmond;
+}
+
+button {
+    color: green;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#backgroundimg {
+    background-image: url(hiclipart.com.png);
+    background-repeat: no-repeat;
+}
