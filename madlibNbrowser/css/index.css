@@ -3,6 +3,7 @@ p {
     color: white;
     z-index: 2;
     position: relative;
+    font-family: 'Italianno', cursive;
 }
 
 label {
