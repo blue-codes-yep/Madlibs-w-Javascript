@@ -11,37 +11,37 @@
     <p>
       Godfather ipsum dolor sit amet. If anything in this life is certain, if
       history has taught us anything, it is that you can
-      <span id="noun1">________</span> anyone. My father's name was Antonio
+      <span id="noun">________</span> anyone. My father's name was Antonio
       Andolini... and this is for you. We're both part of the same hypocrisy,
       senator, but never think it applies to my family. I see you took the name
-      of the <span id="noun2">____________</span>. What was your father's name?
+      of the <span id="noun">____________</span>. What was your father's name?
       Sonny, please don't do anything. Please don't do anything.
     </p>
     <p>
-      Only don't tell me you're <span id="noun3">____________</span>. Because it
+      Only don't tell me you're <span id="noun">____________</span>. Because it
       insults my intelligence and makes me very angry. What's the matter with
       you, huh? What am I going to do? Am I going to make that
-      <span id="noun4">____________</span> an orphan before he's born? Michael,
+      <span id="noun">____________</span> an orphan before he's born? Michael,
       you never told me you knew Johnny Fontane! Don Corleone, I am honored and
       grateful that you have invited me to your home on the wedding day of your
       daughter. And may their first child be a
-      <span id="noun5">____________</span> child. You talk about vengeance. Is
+      <span id="noun">____________</span> child. You talk about vengeance. Is
       vengeance going to bring your son back to you? Or my boy to me?
     </p>
 
     <form>
-      <label> A Noun: <input type="text" id="noun1Input" value="" /> </label>
+      <label> A Noun: <input type="text" id="nounInput" value="" /> </label>
       <label>
-        Another Noun: <input type="text" id="noun2Input" value="" />
+        Another Noun: <input type="text" id="nounInput" value="" />
       </label>
       <label>
-        Third the Noun: <input type="text" id="noun3Input" value="" />
+        Third the Noun: <input type="text" id="nounInput" value="" />
       </label>
       <label>
-        The Fourth Noun: <input type="text" id="noun4Input" value="" />
+        The Fourth Noun: <input type="text" id="nounInput" value="" />
       </label>
       <label>
-        The Noun of the Fifth: <input type="text" id="noun5Input" value="" />
+        The Noun of the Fifth: <input type="text" id="nounInput" value="" />
       </label>
       <button type="button" id="clickMe">Click me</button>
     </form>
@@ -49,32 +49,22 @@
   </body>
   <script>
     const myButton = document.getElementById("clickMe");
-    const noun1 = document.getElementById("noun1");
-    const noun2 = document.getElementById("noun2");
-    const noun3 = document.getElementById("noun3");
-    const noun4 = document.getElementById("noun4");
-    const noun5 = document.getElementById("noun5");
-    const noun1Input = document.getElementById("noun1Input");
-    const noun2Input = document.getElementById("noun2Input");
-    const noun3Input = document.getElementById("noun3Input");
-    const noun4Input = document.getElementById("noun4Input");
-    const noun5Input = document.getElementById("noun5Input");
+    const madlibNouns = document.querySelectorAll("span");
+    const madlibInputs = document.querySelectorAll("input");
 
     myButton.addEventListener("click", function(e) {
       e.preventDefault();
 
-      noun1.innerHTML = noun1Input.value;
-      noun2.innerHTML = noun2Input.value;
-      noun3.innerHTML = noun3Input.value;
-      noun4.innerHTML = noun4Input.value;
-      noun5.innerHTML = noun5Input.value;
+      madlibNouns.forEach(function(noun, index) {
+        noun.innerHTML = madlibInputs[index].value;
+      });
     });
 
-    var entry = document.getElementsByTagName("input");
+    let entry = document.getElementsByTagName("input");
     clear = document.getElementById("clickMe");
 
     function clearfield() {
-      for (var i = 0; i < entry.length; i++) {
+      for (let i = 0; i < entry.length; i++) {
         entry[i].value = "";
       }
     }
