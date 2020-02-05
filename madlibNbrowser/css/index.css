@@ -1,54 +1,63 @@
-
 p {
-    color: white;
-    z-index: 2;
-    position: relative;
-    font-family: 'Italianno', cursive;
+  color: white;
+  z-index: 2;
+  position: relative;
+  font-family: "Italianno", cursive;
 }
 
+
 label {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 100px;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100px;
+  position: relative;
+  z-index: 2;
 }
 
 input {
-    width: 150px;
-    border: 2px solid black;
-    z-index: 3;
-    opacity: 0.7;
+  width: 150px;
+  border: 2px solid black;
+  z-index: 3;
+  opacity: 0.7;
 }
 
-body { 
-    background-color: #9B1C31;
+#box4labels {
+    position: relative;
+    max-width: 190px;
+    height: auto;
+    border: 2px solid #ffffff;
+    padding-right: 30px;
+    padding-bottom: 30px;;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: #9b1c31;
+    opacity: .9;
+  }
+
+body {
+  background-color: #9b1c31;
 }
 
 button {
-    color: red;
-    background-color: black;
-    border: 3px solid black;
-    border-radius: 5px;
-    text-transform: uppercase;
-    z-index: 3;
-    position: absolute;
+  color: red;
+  background-color: black;
+  border: 3px solid black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  z-index: 3;
+  position: absolute;
 }
 
-
 #backgroundimg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin: auto;
-    background: url(hiclipart.com.png) no-repeat bottom;
-    background-size: contain;
-    background-position: bottom;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
-    opacity: 0.7;
-    z-index: 1;
+  display: flex;
+  margin: auto;
+  background: url(hiclipart.com.png) no-repeat bottom;
+  background-size: contain;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.7;
+  z-index: 1;
 }
